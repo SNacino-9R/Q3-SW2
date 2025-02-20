@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Seatwork 2</title>
+	<body>
+
+
+<form>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<img src="https://i.pinimg.com/736x/62/c8/0f/62c80fcccd43d78f5c395e7f1579d0d5.jpg" width="300px">
+			</div>
+			<div class="col">
+				<h3>Hello! My name is Shua! Lets test your math skills!</h3>
+			</div>
+		</div>
+	</div>
+     <div class="container mt-3">
+
+			<label for="height">Enter a value for A:</label>
+			<input type="number" class="form-control" name="tA" id="A"><br>
+
+		<label for="base">Enter a value for B:</label>
+			<input type="number" class="form-control" name="tB" id="B"><br>
+
+			<h3 id="result" class="mt-4">The value is</h3>
+
+
+ <div class="mt-3">
+      	<button type="button" class="btn mb-2" onclick="productAb()">Product of a and b</button>
+        <button type="button" class="btn mb-2" onclick="raiseAb()">a raise to b</button>
+        <button type="button" class="btn mb-2" onclick="getRemainder()">Get the remainder</button>
+        <button type="button" class="btn mb-2" onclick="equalAb()">Check if a is equal to b</button>
+        <button type="button" class="btn mb-2" onClick="window.location.reload()">Refresh</button>
+
+
+	</div>
+
+</form>
+
+<script type="text/javascript">
+
+	function productAb() {
+	    var a = document.getElementById('A').value;
+        var b = document.getElementById('B').value;
+		var ans_product = a * b;
+        document.getElementById('result').innerHTML = 'The answer is ' + ans_product;
+
+	}
+
+	function raiseAb() {
+		var a = document.getElementById('A').value;
+		var b = document.getElementById('B').value;
+		var ans_raise = a ** b;
+        document.getElementById('result').innerHTML = 'The answer is ' + ans_raise;
+	}
+	
+	function getRemainder() {
+		var a = document.getElementById('A').value;
+	 	var b = document.getElementById('B').value;
+	 	var ans_rem = a % b;
+        document.getElementById('result').innerHTML = 'The answer is ' + ans_rem;
+	
+	}
+
+	
+	function equalAb() {
+		var a = document.getElementById('A').value;
+		var b = document.getElementById('B').value;
+		var ans_equal = a== b;
+        document.getElementById('result').innerHTML = 'The answer is ' + ans_equal;
+	}
+</script>
+
+</body>
+</html>
